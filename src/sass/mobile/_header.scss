@@ -1,3 +1,7 @@
+body{
+   background-color:chocolate;
+}
+
 .container{
    position: relative;
    max-width: 375px;
@@ -6,7 +10,9 @@
    justify-content: space-between;
    align-items: center;
 
-   background-color: $bg-body;
+   // background-color: $bg-body;
+
+   background-color: aqua;
 }
 
 .logo{
@@ -51,11 +57,13 @@
 }
 
 .menu{
-   // display: none;
-   position: absolute;
+   position: fixed;
+   overflow-y: scroll;
+   overflow-x:hidden;
    top: 0;
    right: 0;
-   // bottom: 0;
+   bottom: 0;
+   z-index: 1;
    width: 220px;
    // height: 100%;
    padding-top: 130px;
@@ -63,6 +71,8 @@
    @include sidePadding(46px);
    // display: flex;
    background-color: $dk-violet;
+   
+   // display: none;
 }
 .nav{
    .item{
@@ -86,19 +96,25 @@
    right: 20px;
    width: 28px;
    height: 28px;
-   fill: #FFFFFF;
+   padding: 6px;
+   stroke: #FFFFFF;
    background-color: transparent;
    // background-color: teal;
-   border: none;
+   border: 1px solid #fff;
+   border-radius: 50%;
 
    .icon{
-      width: 12px;
-      height: 12px;
+      width: 14px;
+      height: 14px;
+   }
+
+   &:hover{
+      border-color: $orange;
+      stroke: $orange;
    }
 
       &:hover .icon{
          transform: scale(1.5);
-         fill: $orange;
       }
 }
 
@@ -107,6 +123,9 @@
    gap: 18px;
 
    .link{
+      display: inline-block;
+      width: 24px;
+      height: 24px;
       fill: #FFFFFF;
    }
 

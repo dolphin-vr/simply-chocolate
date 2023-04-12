@@ -2,7 +2,10 @@
    padding-left: $padd;
    padding-right: $padd;
 }
-
+@mixin verticalPadding ($padt, $padb) {
+   padding-top: $padt;
+   padding-bottom: $padb;
+}
 
 @mixin btnIcon ($name, $size, $margin){
    content: '';
