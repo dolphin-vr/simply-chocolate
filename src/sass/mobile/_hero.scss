@@ -1,0 +1,9 @@
+.hero{
+   .container{
+      @include verticalPadding (395px, 20px);
+   }
+
+   .title{
+      margin-bottom: 32px;
+   }
+}
