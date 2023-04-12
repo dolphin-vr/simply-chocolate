@@ -1,0 +1,117 @@
+.container{
+   position: relative;
+   max-width: 375px;
+   @include sidePadding(20px);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   background-color: $bg-body;
+}
+
+.logo{
+   display: flex;
+   align-items: center;
+   font-family: 'Montserrat';
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 1.29;
+   letter-spacing: -0.03em;
+   color: $black;
+
+   span{
+      font-style: italic;
+      white-space: pre
+   };
+
+   &::after{
+      @include btnIcon ("logo", 20px, 4px);
+      // content: '';
+      // display: inline-block;
+      // width: 20px;
+      // height: 20px;
+      // margin-left: 4px;
+      // background-image: url(../img/sprite.svg#logo);
+      // background-repeat: no-repeat;
+      // background-size: 24px;
+   }
+}
+
+.menu-btn{
+   display: block;
+   position: relative;
+   width: 28px;
+   height: 28px;
+   border: none;
+   background-color: transparent;
+
+   &::before{
+      @include btnIcon ("menu", 24px, 0);
+   }
+}
+
+.menu{
+   // display: none;
+   position: absolute;
+   top: 0;
+   right: 0;
+   // bottom: 0;
+   width: 220px;
+   // height: 100%;
+   padding-top: 130px;
+   padding-bottom: 20px;
+   @include sidePadding(46px);
+   // display: flex;
+   background-color: $dk-violet;
+}
+.nav{
+   .item{
+      margin-bottom: 24px;
+   }
+
+   .link{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+   }
+}
+
+.close-btn{
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   width: 28px;
+   height: 28px;
+   fill: #FFFFFF;
+   background-color: transparent;
+   // background-color: teal;
+   border: none;
+
+   .icon{
+      width: 12px;
+      height: 12px;
+   }
+
+      &:hover .icon{
+         transform: scale(1.5);
+         fill: $orange;
+      }
+}
+
+.social{   
+   display: flex;
+   gap: 18px;
+
+   .link{
+      fill: #FFFFFF;
+   }
+
+   .icon{
+      width: 22px;
+      height: 22px;
+   }
+}
