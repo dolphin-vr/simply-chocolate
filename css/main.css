@@ -230,6 +230,11 @@ img {
   margin-bottom: 32px;
 }
 
+.footer .container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
