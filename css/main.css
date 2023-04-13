@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
 h1,
 h2,
 h3,
@@ -62,19 +66,17 @@ img {
   overflow: hidden;
 }
 
-body {
-  background-color: chocolate;
-}
-
-.container {
+.header .container {
   position: relative;
   max-width: 375px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 24px;
+  padding-bottom: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: aqua;
+  background-color: #FAFAFA;
 }
 
 .logo {
@@ -105,8 +107,8 @@ body {
 .menu-btn {
   display: block;
   position: relative;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   border: none;
   background-color: transparent;
 }
@@ -130,15 +132,45 @@ body {
   bottom: 0;
   z-index: 1;
   width: 220px;
-  padding-top: 130px;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: calc(60px + 70 * (100vh - 320px) / 120);
   padding-bottom: 20px;
-  padding-left: 46px;
-  padding-right: 46px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #1E1823;
+  transition: transform 250ms;
+}
+@media screen and (max-height: 320px) {
+  .menu {
+    padding-top: 60px;
+  }
+}
+@media screen and (min-height: 440px) {
+  .menu {
+    padding-top: 130px;
+  }
+}
+.menu.is-open {
+  transform: translateX(0);
 }
 
 .nav .item {
-  margin-bottom: 24px;
+  padding-left: 22px;
+  padding-right: 22px;
+  margin-bottom: calc(12px + 12 * (100vh - 320px) / 120);
+}
+@media screen and (max-height: 320px) {
+  .nav .item {
+    margin-bottom: 12px;
+  }
+}
+@media screen and (min-height: 440px) {
+  .nav .item {
+    margin-bottom: 24px;
+  }
 }
 .nav .link {
   font-family: "Montserrat";
@@ -180,13 +212,14 @@ body {
 }
 .social .link {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
+  padding: 2px;
   fill: #FFFFFF;
 }
 .social .icon {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
 }
 
 .hero .container {
