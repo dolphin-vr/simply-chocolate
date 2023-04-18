@@ -260,10 +260,7 @@ body {
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  background-image: url("../img/hero-mob.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 335px;
+  background-color: dimgrey;
   border-radius: 30px;
   border: none;
 }
@@ -280,12 +277,32 @@ body {
   justify-content: space-between;
   margin-bottom: 32px;
 }
-.hero .nav-btn {
+
+.nav-btn {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: -0.03em;
   color: #FFFFFF;
+}
+.nav-btn::after {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-left: 12px;
+  background-image: url("../img/sprite.svg#down");
+  background-repeat: no-repeat;
+  background-size: 28px;
+  border-radius: 50%;
+  background-color: darkslategray;
+}
+.nav-btn:hover::after {
+  background-color: red;
+  -webkit-mask-image: url("../img/sprite.svg");
+  mask-image: url("../img/sprite.svg");
 }
 
 .footer .container {
