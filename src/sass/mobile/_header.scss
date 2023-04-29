@@ -1,17 +1,19 @@
 body{
    // background-color:chocolate;
+    font-family: 'Montserrat', sans-serif;
+      background-color: $bg-body;
 }
 
 .header{
    .container{
       position: relative;
       max-width: 375px;
+      @include centered();
       @include sidePadding(20px);      
       @include verticalPadding (24px, 18px);
       display: flex;
       justify-content: space-between;
       align-items: center;   
-      background-color: $bg-body;
    }
 }
 
@@ -19,7 +21,7 @@ body{
 .logo{
    display: flex;
    align-items: center;
-   font-family: 'Montserrat';
+   // font-family: 'Montserrat';
    font-weight: 700;
    font-size: 14px;
    line-height: 1.29;
@@ -33,14 +35,6 @@ body{
 
    &::after{
       @include btnIcon ("logo", 20px, 4px);
-      // content: '';
-      // display: inline-block;
-      // width: 20px;
-      // height: 20px;
-      // margin-left: 4px;
-      // background-image: url(../img/sprite.svg#logo);
-      // background-repeat: no-repeat;
-      // background-size: 24px;
    }
 }
 
@@ -106,7 +100,7 @@ body{
    }
 
    .link{
-      font-family: 'Montserrat';
+      // font-family: 'Montserrat';
       font-style: normal;
       font-weight: 500;
       font-size: 14px;

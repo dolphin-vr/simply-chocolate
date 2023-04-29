@@ -1,9 +1,74 @@
 .hero{
    .container{
+      @include verticalPadding (0, 72px);
+      @include sidePadding(20px);
+      @include centered();
+      max-width: 375px;
+   }
+
+   .hero-bg{
+      //  max-width: 335px;
       @include verticalPadding (395px, 20px);
+      // margin-top: auto;
+      // padding-bottom: 20px;
+      @include sidePadding(20px);
+      // height: 620px;
+      background-color: dimgrey;
+      // background-image: url("../img/hero-mob.jpg");
+      // background-repeat: no-repeat;
+      // background-position: center;
+      // background-size: 335px;
+      border-radius: 30px;
+      border: none;
    }
 
    .title{
       margin-bottom: 32px;
+      // font-family: 'Montserrat';
+      // font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      color: #FFFFFF;
    }
-}
+
+   .list{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 32px;
+   }
+
+  
+};
+
+.nav-btn{
+   // font-family: inherit;
+   display: flex;
+   align-items: center;
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 1.17;
+   letter-spacing: -0.03em;
+   color: #FFFFFF;
+
+   &::after{
+      @include btnIcon ("down", 28px, 12px);
+      // background-position: center;
+      
+      // content: "";
+      // display: inline-block;
+      // width: 28px;
+      // height: 28px;
+      // margin-left: 12px;
+
+      border-radius: 50%;
+      background-color: darkslategray;
+   }
+
+   &:hover::after {
+      background-color: red;
+      -webkit-mask-image: url("../img/sprite.svg");
+      mask-image: url("../img/sprite.svg");
+   }
+};
